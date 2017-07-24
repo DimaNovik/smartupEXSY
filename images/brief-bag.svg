@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="60px" height="57px" version="1.0" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1009 952"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#BEBEBE;stroke-width:45.3855}
+    .fil1 {fill:none}
+    .fil0 {fill:#BEBEBE}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_565929536">
+   <path class="fil0" d="M182 157l0 795c-40,0 -78,0 -118,0 -21,-30 -43,-60 -64,-87 0,-206 0,-412 0,-618 14,-30 31,-60 45,-89l137 0 0 0z"/>
+   <polygon class="fil0" points="827,157 827,952 945,952 1009,862 1009,244 964,157 "/>
+   <rect class="fil0" x="210" y="157" width="589" height="795"/>
+   <polyline class="fil1 str0" points="324,157 324,68 369,23 687,23 732,68 732,157 "/>
+  </g>
+ </g>
+</svg>

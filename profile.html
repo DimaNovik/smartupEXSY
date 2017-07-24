@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>krautfunding</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+        <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+		<script src="https://api-maps.yandex.ru/2.1.50/?lang=ru_RU" type="text/javascript"></script>
+
+    </head>
+    
+    <body>
+        <header class="header fixed">
+            <div class="container">	<a href="index.html" class="logo">
+
+
+
+				<img src="images/logo.png" srcset="images/logo@2x.png 2x, images/logo@3x.png 3x" alt="SmartUp">
+
+
+
+			</a>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#">Инвестору</a>
+                        </li>
+                        <li><a href="#">Компании</a>
+                        </li>
+                        <li><a href="#">Поддержка</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="in-out-block in-true">	<a href="profile.html" class="in-out">
+
+
+
+					<span class="sprite sprite-in-out"></span>
+
+
+
+					<span class="text">Ivanov</span>
+
+
+
+				</a>
+                </div>
+                <div class="mobile-in">	<a href="profile.htm"><span class="sprite sprite-in-out"></span></a>
+                </div>
+                <div class="burger">
+                    <svg viewBox="0 0 1364 1145">
+                        <path d="M136 0l-90 0c-27,0 -45,18 -45,45l0 90c0,27 18,45 45,45l90 0c27,0 45,-18 45,-45l0 -90c0,-27 -18,-45 -45,-45z"
+                        />
+                        <path d="M136 482l-90 0c-27,0 -45,18 -45,45l0 90c0,27 18,45 45,45l90 0c27,0 45,-18 45,-45l0 -90c0,-27 -18,-45 -45,-45z"
+                        />
+                        <path d="M136 964l-90 0c-27,0 -45,18 -45,45l0 90c0,27 18,45 45,45l90 0c27,0 45,-18 45,-45l0 -90c0,-27 -18,-45 -45,-45l0 0z"
+                        />
+                        <path d="M1304 0l-843 0c-36,0 -60,18 -60,45l0 90c0,27 24,45 60,45l843 0c36,0 60,-18 60,-45l0 -90c0,-27 -24,-45 -60,-45z"
+                        />
+                        <path d="M1304 482l-843 0c-36,0 -60,18 -60,45l0 90c0,27 24,45 60,45l843 0c36,0 60,-18 60,-45l0 -90c0,-27 -24,-45 -60,-45z"
+                        />
+                        <path d="M1304 964l-843 0c-36,0 -60,18 -60,45l0 90c0,27 24,45 60,45l843 0c36,0 60,-18 60,-45l0 -90c0,-27 -24,-45 -60,-45l0 0z"
+                        />
+                    </svg>
+                </div>
+            </div>
+            <!-- /.container -->
+        </header>
+        <!-- /.header -->
+        <main class="main">
+            <div class="prof-head">
+                <div class="container">
+                    <div class="prof-head-center">
+                        <div class="img-wrap">
+                            <img src="images/avatar.jpg" alt=""> <span class="add-photo">
+
+          <i class="sprite sprite-camera"></i>
+
+          добавить фото
+
+        </span>
+ <span class="figures">
+
+          <span class="figure">
+
+            <i class="sprite sprite-circle"></i>
+
+          </span>
+ <span class="figure">
+
+            <i class="sprite sprite-square"></i>
+
+          </span>
+</span>
+                        </div>
+                        <div class="title">Ivan ivanov</div>
+                    </div>
+                    <div class="prof-head-add"> <span class="add-photo">
+
+        <i class="sprite sprite-camera"></i>
+
+        добавить фото обложки
+
+      </span>
+                        <div class="modal_bg modal_gallery">
+                            <div class="modal">
+                                <div class="modal-head">
+                                     <h4 class="title">Галерея</h4>
+                                    <div class="descr">Менять фото</div>
+                                    <div class="select">
+                                        <select name="select">
+                                            <option>Не менять</option>
+                                            <option>Не менять 2</option>
+                                            <option>Не менять 3</option>
+                                            <option>Не менять 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal_gallery-row">
+                                        <div class="gallery-row-main">
+                                            <div class="img-wrap active">
+                                                <img src="" alt="img">
+                                            </div>
+                                            <div class="img-wrap">
+                                                <img src="" alt="img">
+                                            </div>
+                                            <div class="img-wrap">
+                                                <img src="" alt="img">
+                                            </div>
+                                            <div class="img-add">Добавить</div>
+                                        </div>
+                                        <div class="gallery-row-framing">
+                                            <div class="img-wrap">
+                                                <img src="" alt="img">
+                                            </div> <span class="to-framing">Кадрировать</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="button red modal_gallery-close">Отменить</button>
+                                    <button class="button green">Сохранить</button>
+                                </div>
+                            </div>
+                            <!-- /.ae_modal -->
+                        </div>
+                        <!-- /.modal_bg -->
+                        <div class="modal_bg modal_framing">
+                            <div class="modal">
+                                <div class="modal-head">
+                                     <h4 class="title">Кадрирование</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal_framing-row">
+                                        <div class="modal_framing-wrap">
+                                            <img src="images/framing.jpg" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="button red modal_framing-close">Отменить</button>
+                                    <button class="button green">Сохранить</button>
+                                </div>
+                            </div>
+                            <!-- /.ae_modal -->
+                        </div>
+                        <!-- /.modal_bg -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.prof-head -->
+            <div class="tabs prof-main">
+                    <div class="fixed-nav"> 
+                <ul class="tabs__caption">
+                <li class="active"> <i class="sprite sprite-bag"></i><span id='mob-view'></span>
+Портфель</li>
+                <li class=""> <i class="sprite sprite-message"></i><span id='mob-view'></span>
+Сообщения</li>
+                <li class=""> <i class="sprite sprite-profile"></i><span id='mob-view'></span>
+Профиль</li>
+                    
+                  
+                </ul>
+                </div>
+                <div class="tabs__content_wrap">
+                  <!-- /.tabs__content -->
+                    <div class="tabs__content active">
+                        <div class="catalog-header">
+                            <div class="container-tabs header-wrapper">
+                                <div class="catalog-header-left">
+                                     <h2>Каталог проектов</h2>
+                                </div>
+                                <div class="catalog-header-input">
+                                    <form action="#" class="catalog-header-form">
+                                        <select name="select-one" id="">
+                                            <option value="">Любая отрасль</option>
+                                        </select>
+                                        <select name="select-two" id="">
+                                            <option value="">В любой валю..</option>
+                                        </select>
+                                        <button name="search"></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- start projects table title -->
+                        <div class="container-tabs">
+                            <div class="catalog-title">
+                                <div class="title-cell-1">
+                                    <p>Название</p>
+                                </div>
+                                <div class="title-cell-2">
+                                    <p>График погашения</p>
+                                </div>
+                                <div class="title-cell-3">
+                                    <p>Доходность</p>
+                                </div>
+                                <div class="title-cell-4">
+                                    <p>% к получению до конца срока</p>
+                                </div>
+                                <div class="title-cell-5">
+                                    <p>Инвестиции</p>
+                                </div>
+                                <div class="title-cell-6">
+                                    <p>Долг к получению до конца срока</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- start projects blocks -->
+                        <!-- Project row 1-->
+                        <div class="catalog-body">
+                            <div class="container-tabs">
+                                <div class="catalog-projects">
+                                    <div class="project-cell-1">
+                                        <div class="name-circle"></div>
+                                        <p><b>Название</b>
+
+                                            <br/> <span class="name-desc">Заём</span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-2">
+                                        <div class="cell-title">График погашения</div>
+                                        <img src="images/graffik.png" alt="graffik dolg">
+                                    </div>
+                                    <div class="project-cell-3">
+                                        <div class="cell-title">Доходность</div>
+                                        <p class="green">24.00%</p>
+                                    </div>
+                                    <div class="project-cell-4">
+                                        <div class="cell-title">% к получению
+                                            <br/>до конца срока</div>
+                                        <p class="green">46 000 &#8381;
+                                            <br/> <span>(63.89%)</span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-5">
+                                        <div class="cell-title">Инвестиции</div>
+                                        <p class="black">100 000 &#8381;
+                                            <br/>
+                                            <br/><span>5 июня 2017 <span class="time-cell">15:07</span></span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-6">
+                                        <div class="cell-title">Долг к получению
+                                            <br/>до конца срока</div>
+                                        <p class="black">86 000 &#8381;
+                                            <br> <span>(86.00%)</span>
+                                            <br> <span>5 июня 2017 <span class="time-cell">15:07</span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project row 2-->
+                        <div class="catalog-body">
+                            <div class="container-tabs">
+                                <div class="catalog-projects">
+                                    <div class="project-cell-1">
+                                        <div class="name-circle"></div>
+                                        <p><b>Название</b>
+
+                                            <br/> <span class="name-desc">Заём</span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-2">
+                                        <div class="cell-title">График погашения</div>
+                                        <img src="images/graffik.png" alt="graffik dolg">
+                                    </div>
+                                    <div class="project-cell-3">
+                                        <div class="cell-title">Доходность</div>
+                                        <p class="green">24.00%</p>
+                                    </div>
+                                    <div class="project-cell-4">
+                                        <div class="cell-title">% к получению
+                                            <br/>до конца срока</div>
+                                        <p class="green">46 000 &#8381;
+                                            <br/> <span>(63.89%)</span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-5">
+                                        <div class="cell-title">Инвестиции</div>
+                                        <p class="black">100 000 &#8381;
+                                            <br/>
+                                            <br/><span>5 июня 2017 <span class="time-cell">15:07</span></span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-6">
+                                        <div class="cell-title">Долг к получению
+                                            <br/>до конца срока</div>
+                                        <p class="black">86 000 &#8381;
+                                            <br> <span>(86.00%)</span>
+                                            <br> <span>5 июня 2017 <span class="time-cell">15:07</span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project row 3-->
+                        <div class="catalog-body">
+                            <div class="container-tabs">
+                                <div class="catalog-projects">
+                                    <div class="project-cell-1">
+                                        <div class="name-circle"></div>
+                                        <p><b>Название</b>
+
+                                            <br/> <span class="name-desc">Заём</span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-2">
+                                        <div class="cell-title">График погашения</div>
+                                        <img src="images/graffik.png" alt="graffik dolg">
+                                    </div>
+                                    <div class="project-cell-3">
+                                        <div class="cell-title">Доходность</div>
+                                        <p class="green">24.00%</p>
+                                    </div>
+                                    <div class="project-cell-4">
+                                        <div class="cell-title">% к получению
+                                            <br/>до конца срока</div>
+                                        <p class="green">46 000 &#8381;
+                                            <br/> <span>(63.89%)</span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-5">
+                                        <div class="cell-title">Инвестиции</div>
+                                        <p class="black">100 000 &#8381;
+                                            <br/>
+                                            <br/><span>5 июня 2017 <span class="time-cell">15:07</span></span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-cell-6">
+                                        <div class="cell-title">Долг к получению
+                                            <br/>до конца срока</div>
+                                        <p class="black">86 000 &#8381;
+                                            <br> <span>(86.00%)</span>
+                                            <br> <span>5 июня 2017 <span class="time-cell">15:07</span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project row 4-->
+                        <div class="catalog-body-total">
+                            <div class="container-tabs">
+                                <div class="catalog-projects">
+                                    <div class="project-total-cell-1">
+                                        <div class="all-companies">
+                                            <p>Все компании</p>
+                                        </div>
+                                    </div>
+                                    <div class="project-total-cell-2">
+                                        <div class="cell-title">График погашения</div>
+                                        <p>
+                                            <img src="images/graffik.png" alt="graffik dolg">
+                                        </p>
+                                    </div>
+                                    <div class="project-total-cell-3">
+                                        <div class="cell-title">Доходность</div>
+                                        <p class="green-total">24.00%</p>
+                                    </div>
+                                    <div class="project-total-cell-4">
+                                        <div class="cell-title">% к получению
+                                            <br/>до конца срока</div>
+                                        <p class="green-total">46 000 &#8381;
+                                            <br> <span>(63.89%)</span>
+
+                                        </p>
+                                    </div>
+                                    <div class="project-total-cell-5">
+                                        <div class="cell-title">Инвестиции</div>
+                                        <p class="black-total">100 000 &#8381;</p>
+                                    </div>
+                                    <div class="project-total-cell-6">
+                                        <div class="cell-title">Долг к получению
+                                            <br/>до конца срока</div>
+                                        <p class="black-total">86 000 &#8381;
+                                            <br> <span>Дюрация: 16.3 мес</span>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.tabs__content -->
+                   
+                    <!-- Message -->
+                    <div class="tabs__content">
+                        <div class="prof-tab-message">
+                            <div class="container-tabs">
+                                <div class="contact-list-block">
+                                    <div class="seacrh-contact">
+                                        <form action="">
+                                            <input type="text" placeholder="Поиск компании">
+                                        </form>
+                                    </div>
+                                    <div class="contacts-list">
+                                        <div class="contact-one">
+                                            <div class="square-logo"></div>
+                                            <div class="contact-info">
+                                                <p class="contact-title">Маша</p>
+                                                <p class="last-message">Здравствуйте однако <span class="count-message">17</span></p> 
+                                            </div>
+                                            <div class="contact-reg">
+                                                <p class="close"><a href=""><span><img src="images/close.png" alt="close"></span></a></p>
+                                                <p class="reg"><a href=""><span></span></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="contact-one">
+                                            <div class="square-logo"></div>
+                                            <div class="contact-info">
+                                                <p class="contact-title">Финансы</p>
+                                                <p class="last-message">Когда?</p>
+                                            </div>
+                                             <div class="contact-reg">
+                                                <p class="close"><a href=""><span><img src="images/close.png" alt="close"></span></a></p>
+                                                <p class="reg"><a href=""><span></span></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="contact-one">
+                                            <div class="square-logo"></div>
+                                            <div class="contact-info">
+                                                <p class="contact-title">Переводы "ООО Рога-Копытца"</p>
+                                                <p class="last-message"><span class="itsYou">Вы:</span>Добрый вечер <span class="count-message">21</span></p>
+                                            </div>
+                                             <div class="contact-reg">
+                                                <p class="close"><a href=""><span><img src="images/close.png" alt="close"></span></a></p>
+                                                <p class="reg"><a href=""><span></span></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="contact-one">
+                                            <div class="square-logo"></div>
+                                            <div class="contact-info">
+                                                <p class="contact-title">Беседа: отчётность</p>
+                                                <p class="last-message"><span class="itsYou">Вы:</span>Добрый вечер</p>
+                                            </div>
+                                           <div class="contact-reg">
+                                                <p class="close"><a href=""><span><img src="images/close.png" alt="close"></span></a></p>
+                                                <p class="reg"><a href=""><span></span></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="contact-one">
+                                            <div class="square-logo"></div>
+                                            <div class="contact-info">
+                                                <p class="contact-title">Беседа: отчётность</p>
+                                                <p class="last-message"><span class="itsYou">Вы:</span>Добрый вечер</p>
+                                            </div>
+                                             <div class="contact-reg">
+                                                <p class="close"><a href=""><span><img src="images/close.png" alt="close"></span></a></p>
+                                                <p class="reg"><a href=""><span></span></a></p>
+                                            </div>
+                                        </div>
+                                        <div class="contact-one">
+                                            <div class="square-logo"></div>
+                                            <div class="contact-info">
+                                                <p class="contact-title">Беседа: отчётность</p>
+                                                <p class="last-message"><span class="itsYou">Вы:</span>Добрый вечер</p>
+                                            </div>
+                                            <div class="contact-reg">
+                                                <p class="close"><a href=""><span><img src="images/close.png" alt="close"></span></a></p>
+                                                <p class="reg"><a href=""><span><img src="images/reg.png" alt="reg chat icon"></span></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- End Contact-list block -->
+                                <div class="chat-block">
+                                    <div class="chat-header">
+                                        <a href="" class="back-to-chat-list">
+                                            <div class="chat-back"></div>
+                                        </a>
+                                        <div class="chat-title">Беседа: отчётность</div>
+                                        <div class="chat-reg"><p class="reg"><a href=""><span></span></a></p></div>
+                                    </div>
+                                    <div class="chat-message-area">
+                                        <!-- TO ME-->
+                                        <div class="time-status-to-me">14:53</div>
+                                        <div class="block-element"></div>
+                                        <div class="message-to-me">
+                                            <div class="status-to-me"></div>
+                                            Хочешь интересный факт?
+                                           
+                                        </div>
+                                        <!-- END TO ME-->
+
+                                        <!-- MY MESSAGE-->
+                                        <div class="time-status-me">14:53</div>
+                                        <div class="my-message">
+                                            Vere of course
+                                            <div class="status-me"></div>
+                                            <div class="block-element-right"></div>
+                                        </div>
+                                        
+                                        <!-- END MY MESSAGE -->
+            
+                                        <!-- TO ME-->
+                                        <div class="time-status-to-me">14:53</div>
+                                        <div class="block-element"></div>
+                                        <div class="message-to-me">
+                                            <div class="status-to-me"></div>
+                                            Шанс выиграть в лотерею ниже, чем шанс найти зонтик, потеренный в Питере в дождливую погоду, позвонив случайному человеку с надеждой на то, что именно он нашёл твой зонтик...  
+                                        </div>
+                                        <!-- END TO ME-->
+
+                                        <!-- TO ME-->
+                                        <div class="time-status-to-me">14:53</div>
+                                        <div class="block-element"></div>
+                                        <div class="message-to-me">
+                                            
+                                            Understand?
+                                            <div class="status-to-me"></div>
+                                        </div>
+                                        <!-- END TO ME-->
+
+                                        <div class="period-message">Сегодня</div>
+                                        <!-- MY MESSAGE-->
+                                        <div class="time-status-me">14:53</div>
+                                        <div class="my-message">
+                                           
+                                            Яя  
+                                             <div class="status-me"></div>
+                                             <div class="block-element-right"></div>
+                                        </div>
+
+                                        <!-- END MY MESSAGE-->
+                                        <!-- TO ME-->
+                                        <div class="time-status-to-me">14:53</div>
+                                        <div class="block-element"></div>
+                                        <div class="message-to-me">
+                                                
+                                            Understand?
+                                            <div class="status-to-me"></div>
+                                        </div>
+                                        <!-- END TO ME-->
+                                        <!-- TO ME-->
+                                        <div class="time-status-to-me">14:53</div>
+                                        <div class="block-element"></div>
+                                        <div class="message-to-me">
+                                            Understand?
+                                            <div class="status-to-me"></div>
+                                        </div>
+                                        <!-- END TO ME-->
+                                        <!-- TO ME-->
+                                        <div class="time-status-to-me">14:53</div>
+                                        <div class="block-element"></div>
+                                        <div class="message-to-me">
+                                            Understand?
+                                            <div class="status-to-me"></div>
+                                        </div>
+                                        <!-- END TO ME-->
+                                
+                                    </div>
+                                    <div class="chat-footer">
+                                        <div class="fix-file">
+                                            <form action="" method="post">
+                                                <label class="fileContainer">
+                                                <input type="file" />
+                                            </form>
+                                        </div>
+                                        <div class="enter-message">
+                                            <form action="">
+                                                <textarea name="" id="" placeholder="Введите сообщение"></textarea>
+                                            
+                                            </form>
+                                        </div>
+                                        <div class="put-message">
+                                            <a href="#"><img src="images/put.png" alt="put message"></a>
+                                            <a href="#" target="_blank" class="viber"><span class="sprite sprite-viber"></span></a>
+                                            <a href="#" target="_blank" class="watsapp"><span class="sprite sprite-whats-app"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <!-- ./tab-message-container -->
+                            </div>
+                        </div>
+                        <!-- ./prof-tab-message -->
+                    </div>
+                    <!-- /.tabs__content -->
+                     <div class="tabs__content ">
+                        <div class="prof-tab-profile">
+                            <div class="text-block">
+                                <div class="container-tabs">
+                                    <p>Запрашиваемые данные необходимы для офромления документов об инвестировании и проведения платёжных операций. Данные не будут передаваться третьим лицам.</p>
+                                    <p><button class="more">Подробнее</button></p>
+                                </div>
+                            </div>
+                            <div class="info-block-profile">
+                                <div class="container-tabs">
+                                    <h3 class="title">Личные данные</h3>
+                                    <form action="#" method="post" name="personal-data">
+                                        <p><input type="text" name="" placeholder="Имя" /> </p>
+                                        <p><input type="text" name="" placeholder="Отчество" /> </p>
+                                        <p><input type="text" name="" placeholder="Фамилия" /> </p> <br/>
+                                        <p><input type="radio" name="sex" id="man"><label for="man"><span><span></span></span>Мужчина</label></p>
+                                        <p><input type="radio" name="sex" id="woman"><label for="woman"><span><span></span></span>Женщина</label></p> <br/>
+                                        <p><input type="text" name="" placeholder="Дата рождения" class="input-date" id="datepicker" /> </p>
+                                        <p><input type="text" name="" placeholder="ИНН" /> </p>
+                                        <p><input type="text" name="" placeholder="Краткая информация о себе" /> </p>
+                                    <h3 class="title">Паспортные данные</h3>
+                                        <p><input type="text" name="" placeholder="Место рождения" /> </p>
+                                        <p><input type="text" name="" placeholder="Место регистрации" /> </p>
+                                        <p><input type="text" name="" placeholder="Серия и номер паспорта" /> </p>
+                                        <p><input type="text" name="" placeholder="Кем выдан паспорт" /> </p>
+                                        <p><input type="text" name="" placeholder="Дата выдачи паспорта" class="input-date" id="datepicker-2"/> </p>
+                                        <p><input type="text" name="" placeholder="Код подразделения" /> </p>
+                                     
+                                    <h3 class="title">Банковские реквизиты</h3>
+                                        <div id="bank-data">
+                                        <p><input type="text" name="" placeholder="Номер расчетного счёта" /> </p>
+                                        <p><input type="text" name="" placeholder="Наименование банка" /> </p>
+                                        <p><input type="text" name="" placeholder="БИК банка" /> </p>
+                                        <p><input type="text" name="" placeholder="Номер корреспондентского счёта банка" /> </p>
+                                        <p><input type="text" name="" placeholder="Дата выдачи паспорта" class="input-date" id="datepicker-3" /> </p>
+                                        <p><input type="text" name="" placeholder="Код подразделения" /></p>
+                                        </div>
+                                        <div id="new-bank-data"></div>
+                                        <p>
+                                            <button class="delete-bank-data" style="display: none;">Удалить</button>
+                                            <button class="add-bank-data">Добавить</button>
+                                        </p>
+                                        <br/>
+                                    <h3 class="title">Контактные данные</h3>
+                                        <div id="email-block">   
+                                        <p><input type="email" name="" placeholder="Электронная почта" /> </p>
+                                        </div>
+                                        <div id="new-email-block"></div>
+                                        <br/>
+                                        <p>
+                                            <button class="delete-email-block" style="display: none;">Удалить</button>
+                                            <button class="add-email-block">Добавить</button>
+                                        </p>
+                                        <p><input type="text" name="" placeholder="Адрес для корреспонденции" /> <br/></p>
+                                        <p><input type="radio" id="place"><label for="place"><span><span></span></span>Совпадает с адресом регистрации</label> </p><br/>
+                                        <div id="phone-data">
+                                            <p><input type="text" name="" placeholder="Индекс" /> </p>
+                                            <p><input type="text" name="" placeholder="Телефон" /> </p>
+                                        </div>
+                                        <div id="new-phone-data"></div>
+                                        <p>
+                                            <button class="delete-phone-data" style="display: none;">Удалить</button>
+                                            <button class="add-phone-data">Добавить</button>
+                                        </p>
+                                        <br/><br/>
+                                        <p><label for="">Подписываюсь на рассылку</label></p>
+                                            <p><input type="radio" name="rss" id="rssY"/><label for="rssY"><span><span></span></span> Да </label></p>
+                                            <p><input type="radio" name="rss" id="rssN"/><label for="rssN"><span><span></span></span> Нет </label></p>
+                                            <br/>
+                                        <p><label for="">Отправлять мне по СМС</label></p>
+                                            <p><input type="radio" name="sms" id="smsY" /> <label for="smsY"><span><span></span></span> Да </label> </p>
+                                            <p><input type="radio" name="sms" id="smsN" /> <label for="smsN"><span><span></span></span> Нет </label> </p>
+                                            <br/>
+                                    <h3 class="title">Смена пароля</h3>
+                                        <p><input type="text" name="" placeholder="Старый пароль" /> </p>
+                                        <p><input type="text" name="" placeholder="Новый пароль" /> </p>
+                                        <p><input type="text" name="" placeholder="Повторите пароль" /> </p>
+                                        <p><button>Сохранить</button></p>
+                                    </form>
+                                    <br/>
+                                    <h3 class="title">Бизнес профиль</h3>
+                                </div>
+                            </div>
+                            <div class="text-block">
+                                <div class="container-tabs">
+                                    <p>Для аккредитации в качестве инвестора необходимо заполнить все поля анкеты и нажать кнопку «Аккредитовать», расположенную внизу анкеты. Данные не будут передаваться третьим лицам.</p>
+                                    <p><button class="more">Подробнее</button></p>
+                                </div>
+                            </div>
+                            <div class="info-block-profile">
+                                <div class="container-tabs">
+                                <form action="#" method="post" name="business-data">
+                                    <p class="block-title">Опыт работы по найму</p>
+                                        <div id="skill-data">
+                                            <p><input type="text" name="" placeholder="Название организации" /></p>
+                                            <p><input type="text" name="" placeholder="Занимаемая Вами должность" /></p>
+                                            <p><input type="text" name="" placeholder="Численность сотрудников, человек" /></p>
+                                            <p><input type="text" name="" placeholder="Период работы" class="input-date" id="datepicker-4"/></p>
+                                            <p><div data-target="modal-map-wrap" data-toggle=".modal-map-employer"><input type="text" name="" placeholder="Местоположение" class="input-place" data-toggle=".modal-map-employer" id="input-place_1" /></div></p>
+                                            <p><select name="" id="">
+                                                <option value="0">Отрасль деятельности компании</option>
+                                            </select></p>
+                                        </div>
+                                        <div id="new-skill-data"></div>
+                                        <p>
+                                            <button class="delete-skill-data" style="display: none;">Удалить</button>
+                                            <button class="add-skill-data">Добавить</button>
+                                        </p>
+                                        <br/>
+                                        <br/>
+                                    <p class="block-title">Опыт ведения бизнеса</p>
+                                        <div id="skill-business-data">
+                                            <p><input type="text" name="" placeholder="Название организации" /> </p>
+                                            <p><input type="text" name="" placeholder="Занимаемая Вами должность" /> </p>
+                                            <p><input type="text" name="" placeholder="Период работы" class="input-date" id="datepicker-5"/> </p>
+                                            <p><div data-target="modal-map-wrap" data-toggle=".modal-map-employer"><input type="text" name="" placeholder="Местоположение" class="input-place" data-toggle=".modal-map-employer" id="input-place_2" /></div></p>
+                                            <p><select name="" id="">
+                                                <option value="0">Отрасль деятельности компании</option>
+                                            </select> <br/>
+                                            <p><input type="text" name="" placeholder="Юрисдикция" /> </p>
+                                            <p><input type="text" name="" placeholder="Доля участия в компании, %" /> </p>
+                                            <p><select name="" id="">
+                                                <option value="0">Текущий статус</option>
+                                            </select> </p>
+                                        </div>
+                                        <div id="new-skill-business-data"></div>
+                                        <p>
+                                            <button class="delete-skill-business-data" style="display: none;">Удалить</button>
+                                            <button class="add-skill-business-data">Добавить</button> 
+                                        </p>
+                                        <br/>
+                                        <p><select name="" id="">
+                                            <option value="0">Ориентировочный годовой доход</option>
+                                        </select> </p>
+                                <h3 class="title">Образование</h3>
+                                    <p class="block-title">Сведения об образовании</p>
+                                        <div id="educ-data"> 
+                                            <p><input type="text" name="" placeholder="Учебное заведение" /> </p>
+                                            <p><input type="text" name="" placeholder="Специализация" /> </p>
+                                            <p><input type="text" name="" placeholder="Ученая степень, специальность" /> </p>
+                                            <p><div data-target="modal-map-wrap" data-toggle=".modal-map-employer"><input type="text" name="" placeholder="Местоположение" class="input-place" data-toggle=".modal-map-employer" id="input-place_3" /></div></p>
+                                            <p><input type="text" name="" placeholder="Период обучения" class="input-date" id="datepicker-6" /> </p>
+                                        </div>
+                                        <div id="new-educ-data"></div>
+                                        <p>
+                                            <button class="delete-educ-data" style="display: none;">Удалить</button>
+                                            <button class="add-educ-data">Добавить</button>
+                                        </p> 
+                                        <br/>
+                                        <br/>
+                                    <p class="block-title">Владение иностранными языками</p>
+                                        <div id="lang-data">
+                                            <p><select name="" id="">
+                                                <option value="0">Иностранный язык</option>
+                                            </select> </p>
+                                            <p><select name="" id="">
+                                                <option value="0">Уровень владения</option>
+                                            </select> </p>
+                                        </div>
+                                        <div id="new-lang-data"></div>
+                                        <p>
+                                            <button class="delete-lang-data" style="display: none;">Удалить</button>
+                                            <button class="add-lang-data">Добавить</button>
+                                        </p>
+                                         <br/>               
+                                <h3 class="title">Опыт инвестирования</h3>
+                                    <input type="text" placeholder="Портфель период с _ _ _ _ года">
+                                <h3 class="title">Экспертиза и инвестиционная стратегия</h3>
+                                    <p class="block-title">Сферы инвестирования</p>
+                                        <p><input type="checkbox" id="invest-1"><label for="invest-1"><span><span></span></span>ИТ</label></p>
+                                        <p><input type="checkbox" id="invest-2"><label for="invest-2"><span><span></span></span>E-commerce</label>  </p>
+                                        <p><input type="checkbox" id="invest-3"><label for="invest-3"><span><span></span></span>Приложения</label>  </p>
+                                        <p><input type="checkbox" id="invest-4"><label for="invest-4"><span><span></span></span>Игры</label>  </p>
+                                        <p><input type="checkbox" id="invest-5"><label for="invest-5"><span><span></span></span>Медиа</label>  </p>
+                                        <p><input type="checkbox" id="invest-6"><label for="invest-6"><span><span></span></span>Развлечения</label>  </p>
+                                        <p><input type="checkbox" id="invest-7"><label for="invest-7"><span><span></span></span>Рестораны</label>  </p>
+                                        <p><input type="checkbox" id="invest-8"><label for="invest-8"><span><span></span></span>Авто</label>  </p>
+                                        <p><input type="checkbox" id="invest-9"><label ffor="invest-9"><span><span></span></span>Логистика</label>  </p>
+                                        <p><input type="checkbox" id="invest-10"><label for="invest-10"><span><span></span></span>Промышленность</label>  </p>
+                                        <p><input type="checkbox" id="invest-11"><label for="invest-11"><span><span></span></span>Образование</label>  </p>
+                                        <p><input type="checkbox" id="invest-12"><label for="invest-12"><span><span></span></span>Здоровье</label>  </p>
+                                        <p><input type="checkbox" id="invest-13"><label for="invest-13"><span><span></span></span>Финансовые технологии</label>  </p>
+                                        <p><input type="checkbox" id="invest-14"><label for="invest-14"><span><span></span></span>Спорт</label>  </p>
+                                        <p><input type="checkbox" id="invest-15"><label for="invest-15"><span><span></span></span>Туризм и путешествия</label>  </p>
+                                        <p><input type="checkbox" id="invest-16"><label for="invest-16"><span><span></span></span>Недвижимость</label>  </p>
+                                        <p><input type="checkbox" id="invest-17"><label for="invest-17"><span><span></span></span> Альтернативная энергетика</label> </p>
+                                        <p><input type="checkbox" id="invest-18"><label for="invest-18"><span><span></span></span>Аэро</label>  </p>
+                                        <p><input type="checkbox" id="invest-19"><label for="invest-19"><span><span></span></span>Cloud/SaaS</label>  </p>
+                                        <p><input type="checkbox" id="invest-20"><label for="invest-20"><span><span></span></span>Социальные сервисы</label>  </p>
+                                        <p><input type="checkbox" id="invest-21"><label for="invest-21"><span><span></span></span>Hardware</label>  </p>
+                                        <p><input type="checkbox" id="invest-22"><label for="invest-22"><span><span></span></span>Реклама и PR</label>  </p>
+                                        <p><input type="checkbox" id="invest-23"><label for="invest-23"><span><span></span></span>Телекоммуникация</label>  </p>
+                                        <p><input type="checkbox" id="invest-24"><label for="invest-24"><span><span></span></span>Новые материалы</label>  </p>
+                                        <p><input type="checkbox" id="invest-25"><label for="invest-25"><span><span></span></span>Роботы</label>  </p>
+                                        <p><input type="checkbox" id="invest-26"><label for="invest-26"><span><span></span></span>Big Data</label>  </p>
+                                        <p><input type="checkbox" id="invest-27"><label for="invest-27"><span><span></span></span>Marketplace</label>  </p>
+                                        <p><input type="checkbox" id="invest-28"><label for="invest-28"><span><span></span></span>Другое</label>  </p>
+                                        <br/>
+                                    <p class="block-title">Стадии инвестирования</p>
+                                        <p><input type="checkbox" id="stage-1"><label for="stage-1"><span><span></span></span>Preseed</label></p>
+                                        <p><input type="checkbox" id="stage-2"><label for="stage-2"><span><span></span></span>Seed</label></p>
+                                        <p><input type="checkbox" id="stage-3"><label for="stage-3"><span><span></span></span>Round A</label></p>
+                                        <p><input type="checkbox" id="stage-4"><label for="stage-4"><span><span></span></span>Round B</label></p>
+                                        <p><input type="checkbox" id="stage-5"><label for="stage-5"><span><span></span></span>Без стадий</label></p>
+                                        <br/>
+                                    <p class="block-title">Стадии зрелости компаний</p>
+                                        <p><input type="checkbox" id="stage-adult-1"><label for="stage-adult-1"><span><span></span></span>Идея</label></p>
+                                        <p><input type="checkbox" id="stage-adult-2"><label for="stage-adult-2"><span><span></span></span>Готов прототип</label></p>
+                                        <p><input type="checkbox" id="stage-adult-3"><label for="stage-adult-3"><span><span></span></span>Первые продажи</label></p>
+                                        <p><input type="checkbox" id="stage-adult-4"><label for="stage-adult-4"><span><span></span></span>Генерирует выручку более 6 месяцев</label></p>
+                                        <p><input type="checkbox" id="stage-adult-5"><label for="stage-adult-5"><span><span></span></span> Компания безубыточна более 6 месяцев </label></p>
+                                        <p><input type="checkbox" id="stage-adult-6"><label for="stage-adult-6"><span><span></span></span>Компания безубыточна более 12 месяцев</label></p>
+                                        <br/>
+                                        <p><select name="share" id="">
+                                            <option value="0">Доля участия в проекте</option>
+                                        </select></p>
+                                        <br/>
+                                        <br/>
+                                    <p class="block-title">Вид инвестирования</p>
+                                        <p><input type="checkbox" id="kind-invest-1"><label for="kind-invest-1"><span><span></span></span>Заем</label></p>
+                                        <p><input type="checkbox" id="kind-invest-2"><label for="kind-invest-2"><span><span></span></span>Конвертируем заем</label></p>
+                                        <p><input type="checkbox" id="kind-invest-3"><label for="kind-invest-3"><span><span></span></span>Доля</label></p>
+                                        <p><input type="checkbox" id="kind-invest-4"><label for="kind-invest-4"><span><span></span></span>Акции</label></p>
+                                        <p><input type="checkbox" id="kind-invest-5"><label for="kind-invest-5"><span><span></span></span>Опцион</label></p>
+                                        <br/>
+                                        <p><select name="" id="">
+                                            <option value="0">Размер планируемых инвестиций</option>
+                                        </select> </p>
+                                        <p><select name="" id="">
+                                            <option value="0">Ожидаемая доходность</option>
+                                        </select> </p>
+                                        <p><select name="" id="">
+                                            <option value="0">Срок инвестиций</option>
+                                        </select>
+                                        </p>
+                                        <br/>
+                                        <br/>
+                                    <p class="block-title">Вид инвестирования</p>
+                                        <p><input type="checkbox" id="kind-invest-other-1"><label for="kind-invest-other-1"><span><span></span></span>MBO</label></p>
+                                        <p><input type="checkbox" id="kind-invest-other-2"><label for="kind-invest-other-2"><span><span></span></span>IPO</label></p>
+                                        <p><input type="checkbox" id="kind-invest-other-3"><label for="kind-invest-other-3"><span><span></span></span> Перепродажа другому инвестору</label></p>
+                                        <p><input type="checkbox" id="kind-invest-other-4"><label for="kind-invest-other-4"><span><span></span></span>Стратег</label></p>
+                                        <p><input type="checkbox" id="kind-invest-other-5"><label for="kind-invest-other-5"><span><span></span></span>Погашение долга</label></p>
+                                        <br/>
+                                <h3 class="title">Отслеживание инвестиций</h3>
+                                        <p class="block-title">Отчетность</p>
+                                        <p><input type="checkbox" id="tracing-1"><label for="tracing-1"><span><span></span></span> Управленческая отчетность</label></p>
+                                        <p><input type="checkbox" id="tracing-2"><label for="tracing-2"><span><span></span></span>Бухгалтерская</label> </p> 
+                                        <p><input type="checkbox" id="tracing-3"><label for="tracing-3"><span><span></span></span>Аудиторская</label> </p>
+                                         <br/>
+                                    <p class="block-title">Периодичность</p>
+                                        <p><input type="checkbox" id="period-1"><label for="period-1"><span><span></span></span>Еженедельно</label></p>
+                                        <p><input type="checkbox" id="period-2"><label for="period-2"><span><span></span></span>Ежемесячно</label></p>
+                                        <p><input type="checkbox" id="period-3"><label for="period-3"><span><span></span></span>MBO</label></p>
+                                        <p> <input type="checkbox" id="period-4"><label for="period-4"><span><span></span></span>Ежеквартально</label></p>
+                                        <br/>
+                                <h3 class="title">Статус аккредитации</h3>
+                                    <p><button>Аккредитировать</button></p>
+                                </form>
+                                </div>
+                            </div>
+                            <div class="total-profile">
+                                <div class="container-tabs">
+                                    <button>Сохранить</button>
+                                    <button>Отменить</button>                         
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.prof-tab-profile -->
+                    </div>
+                </div>
+                <!-- /.tabs__content_wrap -->
+            </div>
+            <!-- /.prof-main -->
+        </main>
+        <!-- /.main -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="col">
+                         <h4 class="title">О нас</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">О компании</a>
+                            </li>
+                            <li><a href="#">Наша команда</a>
+                            </li>
+                            <li><a href="#">Отзывы</a>
+                            </li>
+                            <li><a href="#">Новости</a>
+                            </li>
+                            <li><a href="#">СМИ о нас</a>
+                            </li>
+                            <li><a href="#">Наши партнёры</a>
+                            </li>
+                            <li><a href="#">Тарифы и услуги</a>
+                            </li>
+                            <li><a href="#">Статьи</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                         <h4 class="title">Компании</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Займ на развитие бизнеса</a>
+                            </li>
+                            <li><a href="#">Услуга "Без посредников"</a>
+                            </li>
+                            <li><a href="#">Кредитный рейтинг</a>
+                            </li>
+                            <li><a href="#">Электронная подпись</a>
+                            </li>
+                            <li><a href="#">Вопросы заёмщиков</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                         <h4 class="title">Инвестору</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#">Инвестиции в P2P-кредитование</a>
+                            </li>
+                            <li><a href="#">Портфельные продукты</a>
+                            </li>
+                            <li><a href="#">Электронная подпись</a>
+                            </li>
+                            <li><a href="#">Проекты для инвестирования</a>
+                            </li>
+                            <li><a href="#">Проекты "Без посредников"</a>
+                            </li>
+                            <li><a href="#">Вопросы инвесторов</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="text">Сервис «Поток» — физические лица выдают займы бизнесу. Для заёмщика —
+                        деньги за 2 дня. Для инвестора — до 30% годовых.
+                        <br>Организатором сервиса «Поток» является ООО «Поток.Диджитал». Альфа-Банк
+                        и ООО «Поток.Диджитал» являются аффилированными компаниями и входят в группу
+                        компаний Альфа-Групп.</p>
+                    <ul class="footer-social-menu">
+                        <li><a href="#"><span class="sprite sprite-google"></span></a>
+                        </li>
+                        <li><a href="#"><span class="sprite sprite-facebook"></span></a>
+                        </li>
+                        <li><a href="#"><span class="sprite sprite-twitter"></span></a>
+                        </li>
+                        <li><a href="#"><span class="sprite sprite-instagram"></span></a>
+                        </li>
+                        <li><a href="#"><span class="sprite sprite-vk"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- /.footer -->
+        
+        <div class="modal-map-wrap-overlay"></div>
+		<div class="modal-map-wrap modal-map-employer">
+		    <div class="modal-map">
+		        <div class="modal-map-head">
+		        	<span>Введите ваш адрес...</span>
+		        </div>
+		        <!-- /.modal-head -->
+		        <div id="map-searcher" class="map" data-input=".modal-map-employer"></div>
+		        <div class="modal-foot">
+		        <p class="modal-foot__text">Левой кнопкой мыши первым кликом выберите центр области, затем вторым - радиус области где хотите, чтобы была ваша работа.</p>
+		            <button data-selected="input-place_1" class="modal-foot__btn modal-foot__btn--select">Выбрать</button>
+		            <button class="modal-foot__btn modal-foot__btn--cancel">Отменить</button>
+		        </div>
+		        <!-- /.modal-foot -->
+		    </div>
+		    <!-- /.modal -->
+		</div>
+        <style>
+
+
+        </style>
+        <script>
+       
+	
+
+        </script>
+        <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/profileFormScripts.js"></script>
+
+    </body>
+
+</html>
