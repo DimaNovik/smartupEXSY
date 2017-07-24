@@ -1961,7 +1961,25 @@ END #normalize
 .sprite-profile {
   width: 13px;
   height: 13px;
-  background-position: -313px -96px; }
+  background-position: -313px -96px;
+  position: relative;
+}
+.sprite__count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding-top: 5px;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 5px;
+  border: 1px solid rgba(98, 203, 128, 0.9);
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  color: #47b166;
+}
 
 .sprite-rating {
   width: 10px;
@@ -3550,6 +3568,7 @@ END #main-in
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;
+    position: relative;
     -webkit-transition: background-color 0.4s;
     transition: background-color 0.4s; }
     .tabs__caption li:hover {
@@ -3585,6 +3604,7 @@ END #main-in
   padding-bottom: 78px;
   line-height: 1.2; }
   .prof-tab-profile .text-block p {
+    max-width: 500px;
     margin: 0; }
 
 .prof-tab-profile .total {
@@ -3614,6 +3634,9 @@ END #main-in
     .prof-tab-profile .total button:hover {
       color: #fff;
       background-color: rgba(0, 0, 0, 0.4); }
+.prof-tab-profile select.active {
+    background-color: #f4f4f4;
+}
 
 .info-block-profile {
   padding-top: 10px;
@@ -3631,6 +3654,16 @@ END #main-in
     letter-spacing: -1px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.3); }
+.info-block-profile input.active {
+  background-color: #f4f4f4;
+}
+
+.info-block-profile p label {
+  color: #5e5e5e;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
 
 .info-row {
   display: -webkit-box;
@@ -5142,6 +5175,61 @@ END #footer
   }
   .total-profile {
     text-align: center;
+  }
+
+  .sprite-bag {
+    background-position: center;
+    background-image: url(../images/portfolio.png);
+    width: 39px;
+    height: 38px;
+  }
+  .sprite-message {
+    background-position: center;
+    background-image: url(../images/msg.png); 
+    width: 42px;
+    height: 32px;
+  }
+  .sprite-profile {
+    background-position: center;
+    background-image: url(../images/profile.png); 
+    width: 36px;
+    height: 35px;
+  }
+  .sprite__count {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+  }
+  .footer {
+    display: none;
+  }
+  .tabs__caption {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    padding-top: 13px;
+    padding-bottom: 15px;
+  }
+  .tabs__caption li {
+    border-radius: 10px;
+  }
+  .tabs__caption li i {
+    height: 38px;
+  }
+  .tabs__caption .sprite {
+    margin-right: 0;
+  }
+  .info-block-profile button, .more {
+    color: #5e5e5e;
   }
   }
 

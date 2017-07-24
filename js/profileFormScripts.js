@@ -1,39 +1,90 @@
 $(document).ready(function() {
 	
+  /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+  /* Written by Andrew Stromnov (stromnov@gmail.com). */
+  ( function( factory ) {
+    if ( typeof define === "function" && define.amd ) {
+
+    // AMD. Register as an anonymous module.
+    define( [ "../widgets/datepicker" ], factory );
+  } else {
+
+    // Browser globals
+    factory( jQuery.datepicker );
+  }
+}( function( datepicker ) {
+
+  datepicker.regional.ru = {
+    closeText: "Закрыть",
+    prevText: "&#x3C;Пред",
+    nextText: "След&#x3E;",
+    currentText: "Сегодня",
+    monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
+    "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
+    monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
+    "Июл","Авг","Сен","Окт","Ноя","Дек" ],
+    dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
+    dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
+    dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
+    weekHeader: "Нед",
+    dateFormat: "dd.mm.yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: "" };
+    datepicker.setDefaults( datepicker.regional.ru );
+
+    return datepicker.regional.ru;
+
+  } ) );
+
 	// Очищаю placeholder при фокусе на input
 	$('input, textarea').focus(function(){
     $(this).data('placeholder',$(this).attr('placeholder'))
     $(this).attr('placeholder','');
-    });
-    $('input, textarea').blur(function(){
-   	$(this).attr('placeholder',$(this).data('placeholder'));
- 	});
+  });
+  $('input, textarea').blur(function(){
+    $(this).attr('placeholder',$(this).data('placeholder'));
+  });
 
- 	var checkbox = $('input[type="checkbox"]'),
- 		radio = $('input[type="radio"]');
+  var checkbox = $('input[type="checkbox"]'),
+  radio = $('input[type="radio"]');
 
- 	checkbox.on('change', function(){
- 		$(this).parent().css('color', '#38cf63');
- 	});
+  checkbox.on('change', function(){
+   $(this).parent().css('color', '#38cf63');
+ });
 
- 	$("#datepicker").css('cursor', 'pointer');
- 	$("#datepicker").datepicker({ dateFormat: 'dd-mm-yy' });
+  $("#datepicker").css('cursor', 'pointer');
+  $("#datepicker").datepicker({ 
+    dateFormat: 'dd.mm.yy'
+  });
 
- 	$("#datepicker-2").css('cursor', 'pointer');
- 	$("#datepicker-2").datepicker({ dateFormat: 'dd-mm-yy' });
+  $("#datepicker-2").css('cursor', 'pointer');
+  $("#datepicker-2").datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
 
- 	$("#datepicker-3").css('cursor', 'pointer');
- 	$("#datepicker-3").datepicker({ dateFormat: 'dd-mm-yy' });
+  $("#datepicker-3").css('cursor', 'pointer');
+  $("#datepicker-3").datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
 
- 	$("#datepicker-4").css('cursor', 'pointer');
- 	$("#datepicker-4").datepicker({ dateFormat: 'dd-mm-yy' });
+  $("#datepicker-4").css('cursor', 'pointer');
+  $("#datepicker-4").datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
 
- 	$("#datepicker-5").css('cursor', 'pointer');
- 	$("#datepicker-5").datepicker({ dateFormat: 'dd-mm-yy' });
+  $("#datepicker-5").css('cursor', 'pointer');
+  $("#datepicker-5").datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
 
- 	$("#datepicker-6").css('cursor', 'pointer');
- 	$("#datepicker-6").datepicker({ dateFormat: 'dd-mm-yy' });
+  $("#datepicker-6").css('cursor', 'pointer');
+  $("#datepicker-6").datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
 
+  $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
 
  	// Добавляем поля для Банковские реквизиты
  	$('.add-bank-data').on('click', function(event) {
@@ -163,48 +214,48 @@ $(document).ready(function() {
 
  	// Scripts for Message tab
  	$('.contact-one').mouseover(function(){
-        $(this).children('.contact-reg').css('display', 'block');
-    });
-    $('.contact-one').mouseout(function(){
-        $(this).children('.contact-reg').css('display', 'none');
-    });
-    $('.contact-one').on('click', function(event) {
-    	$('.contact-list-block ').css('display', 'none');	
-    	$('.chat-block').css('display', 'block');
-    })
+    $(this).children('.contact-reg').css('display', 'block');
+  });
+  $('.contact-one').mouseout(function(){
+    $(this).children('.contact-reg').css('display', 'none');
+  });
+  $('.contact-one').on('click', function(event) {
+   $('.contact-list-block ').css('display', 'none');	
+   $('.chat-block').css('display', 'block');
+ })
 
-    $('.back-to-chat-list').on('click', function(event){
-    	event.preventDefault();
-    	$('.contact-list-block ').css('display', 'block');	
-    	$('.chat-block').css('display', 'none');
-    })
+  $('.back-to-chat-list').on('click', function(event){
+   event.preventDefault();
+   $('.contact-list-block ').css('display', 'block');	
+   $('.chat-block').css('display', 'none');
+ })
 
 
      //Open modal
-        $(document).on('click', '[data-target="modal-map-wrap"]', function (event) {
-            event.preventDefault();
-            var $this = $(this);
-            var $childId = $this.find('input').attr("id");
-            var $body = $('body');
-            var $modal = $($this.data('toggle'));
+     $(document).on('click', '[data-target="modal-map-wrap"]', function (event) {
+      event.preventDefault();
+      var $this = $(this);
+      var $childId = $this.find('input').attr("id");
+      var $body = $('body');
+      var $modal = $($this.data('toggle'));
 
-            $body.addClass('js-modal-map-open');
-            $modal.addClass('js-modal-map-open');
+      $body.addClass('js-modal-map-open');
+      $modal.addClass('js-modal-map-open');
 
-            $(".modal-foot__btn--select").data("selected", $childId)
+      $(".modal-foot__btn--select").data("selected", $childId)
 
-            setTimeout(function () {
-                $modal.find('.modal-map').addClass('js-modal-map-open');
-            }, 300);
-            console.log(1);
+      setTimeout(function () {
+        $modal.find('.modal-map').addClass('js-modal-map-open');
+      }, 300);
+      console.log(1);
         }); //end click
-    
-            
-;(function() {
 
-    var infowindow;
-    var infowindowSearcher;
-  var filterLinkValue;
+
+     ;(function() {
+
+      var infowindow;
+      var infowindowSearcher;
+      var filterLinkValue;
 
 
 
@@ -221,50 +272,50 @@ $(document).ready(function() {
     var prev_position;
     var setCenter = true;
     if ($('.map').length) {
-        ymaps.ready(function () {
-            geolocation = ymaps.geolocation;
-            var myMap = new ymaps.Map("map-searcher", {
-              center: [55.76, 37.64],
-              zoom: 10,
-              controls: []
-            });
+      ymaps.ready(function () {
+        geolocation = ymaps.geolocation;
+        var myMap = new ymaps.Map("map-searcher", {
+          center: [55.76, 37.64],
+          zoom: 10,
+          controls: []
+        });
 
 
-            geolocation.get({
-                provider: 'auto',
-                mapStateAutoApply: true
-            }).then(function (result) {
-                infowindowSearcher = (result.geoObjects.get(0).properties.get('text'));
+        geolocation.get({
+          provider: 'auto',
+          mapStateAutoApply: true
+        }).then(function (result) {
+          infowindowSearcher = (result.geoObjects.get(0).properties.get('text'));
 
-                
-                myMap.setCenter( result.geoObjects.get(0).geometry.getCoordinates() );
-                myMap.setZoom( 14 );
-            });
 
-            var searchControl = new ymaps.control.SearchControl({
-                options: {
-                    noPlacemark: true
-                }
-            });
+          myMap.setCenter( result.geoObjects.get(0).geometry.getCoordinates() );
+          myMap.setZoom( 14 );
+        });
 
-            var searchResults = new ymaps.GeoObjectCollection(null, {
-                    hintContentLayout: ymaps.templateLayoutFactory.createClass('$[properties.name]')
-                });
-            myMap.controls.add(searchControl);
-            myMap.geoObjects.add(searchResults);
+        var searchControl = new ymaps.control.SearchControl({
+          options: {
+            noPlacemark: true
+          }
+        });
+
+        var searchResults = new ymaps.GeoObjectCollection(null, {
+          hintContentLayout: ymaps.templateLayoutFactory.createClass('$[properties.name]')
+        });
+        myMap.controls.add(searchControl);
+        myMap.geoObjects.add(searchResults);
             // РџСЂРё РєР»РёРєРµ РїРѕ РЅР°Р№РґРµРЅРЅРѕРјСѓ РѕР±СЉРµРєС‚Сѓ РјРµС‚РєР° СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РєСЂР°СЃРЅРѕР№.
             searchResults.events.add('click', function (e) {
-                e.get('target').options.set('preset', 'islands#blueStretchyIcon');
+              e.get('target').options.set('preset', 'islands#blueStretchyIcon');
             });
             // Р’С‹Р±СЂР°РЅРЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚ РїРѕРјРµС‰Р°РµРј РІ РєРѕР»Р»РµРєС†РёСЋ.
             searchControl.events.add('resultselect', function (e) {
-                var index = e.get('index');
-                searchControl.getResult(index).then(function (res) {
-                   searchResults.add(res);
-                   infowindow = res.properties.get('text');
-                });
+              var index = e.get('index');
+              searchControl.getResult(index).then(function (res) {
+               searchResults.add(res);
+               infowindow = res.properties.get('text');
+             });
             }).add('submit', function () {
-                    searchResults.removeAll();
+              searchResults.removeAll();
             })
 
             circle = new ymaps.Circle([coords], {}, 
@@ -278,106 +329,106 @@ $(document).ready(function() {
             })
 
             myMap.events.add('click', function (e) {
-                if (setCenter) {
-                    circle.geometry.setRadius(null);
-                    prev_position = e.get('coords');
-                    circle.geometry.setCoordinates(prev_position);
-                    if (myPlacemark) {
-                        myPlacemark.geometry.setCoordinates(prev_position);
-                    }else {
-                        myPlacemark = createPlacemark(prev_position);
-                        myMap.geoObjects.add(myPlacemark);
-                    }
-                    getAddress(prev_position);
-                    setCenter = false;
-                } else {
-                      if (prev_position != undefined) {
-                        var d = Math.round(ymaps.coordSystem.geo.getDistance(prev_position, e.get('coords')));
-                        if (d > 100000) { d = 100000}
-                        circle.geometry.setRadius(d);
-                      } 
-                    setCenter = true;
-                    prev_position = undefined;
-
+              if (setCenter) {
+                circle.geometry.setRadius(null);
+                prev_position = e.get('coords');
+                circle.geometry.setCoordinates(prev_position);
+                if (myPlacemark) {
+                  myPlacemark.geometry.setCoordinates(prev_position);
+                }else {
+                  myPlacemark = createPlacemark(prev_position);
+                  myMap.geoObjects.add(myPlacemark);
                 }
+                getAddress(prev_position);
+                setCenter = false;
+              } else {
+                if (prev_position != undefined) {
+                  var d = Math.round(ymaps.coordSystem.geo.getDistance(prev_position, e.get('coords')));
+                  if (d > 100000) { d = 100000}
+                    circle.geometry.setRadius(d);
+                } 
+                setCenter = true;
+                prev_position = undefined;
+
+              }
             });
 
             myMap.geoObjects.add(circle);
+          });
+
+      ymaps.ready(function () {
+        geolocation = ymaps.geolocation;
+        myMap = new ymaps.Map("map-employer", {
+          center: [55.76, 37.64],
+          zoom: 13,
+          controls: []
         });
 
-        ymaps.ready(function () {
-            geolocation = ymaps.geolocation;
-            myMap = new ymaps.Map("map-employer", {
-                center: [55.76, 37.64],
-                zoom: 13,
-                controls: []
-            });
+        geolocation.get({
+          provider: 'auto',
+          mapStateAutoApply: true
+        }).then(function (result) {         
+          myMap.setCenter( result.geoObjects.get(0).geometry.getCoordinates() );
+          myMap.setZoom( 14 );
+        });
+        var searchControl = new ymaps.control.SearchControl({
+          options: {
+            noPlacemark: true
+          }
+        });
 
-            geolocation.get({
-                provider: 'auto',
-                mapStateAutoApply: true
-            }).then(function (result) {         
-                myMap.setCenter( result.geoObjects.get(0).geometry.getCoordinates() );
-                myMap.setZoom( 14 );
-            });
-            var searchControl = new ymaps.control.SearchControl({
-                options: {
-                    noPlacemark: true
-                }
-            });
-
-            var searchResults = new ymaps.GeoObjectCollection(null, {
-                    hintContentLayout: ymaps.templateLayoutFactory.createClass('$[properties.name]')
-                });
-            myMap.controls.add(searchControl);
-            myMap.geoObjects.add(searchResults);
+        var searchResults = new ymaps.GeoObjectCollection(null, {
+          hintContentLayout: ymaps.templateLayoutFactory.createClass('$[properties.name]')
+        });
+        myMap.controls.add(searchControl);
+        myMap.geoObjects.add(searchResults);
             // РџСЂРё РєР»РёРєРµ РїРѕ РЅР°Р№РґРµРЅРЅРѕРјСѓ РѕР±СЉРµРєС‚Сѓ РјРµС‚РєР° СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РєСЂР°СЃРЅРѕР№.
             searchResults.events.add('click', function (e) {
-                e.get('target').options.set('preset', 'islands#blueStretchyIcon');
+              e.get('target').options.set('preset', 'islands#blueStretchyIcon');
             });
             // Р’С‹Р±СЂР°РЅРЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚ РїРѕРјРµС‰Р°РµРј РІ РєРѕР»Р»РµРєС†РёСЋ.
             searchControl.events.add('resultselect', function (e) {
-                var index = e.get('index');
-                searchControl.getResult(index).then(function (res) {
-                   searchResults.add(res);
-                   infowindow = res.properties.get('text');
-                });
+              var index = e.get('index');
+              searchControl.getResult(index).then(function (res) {
+               searchResults.add(res);
+               infowindow = res.properties.get('text');
+             });
             }).add('submit', function () {
-                    searchResults.removeAll();
-                })
-        });
+              searchResults.removeAll();
+            })
+          });
     }
 
     // РЎРѕР·РґР°РЅРёРµ РјРµС‚РєРё.
-  function createPlacemark(coords) {
+    function createPlacemark(coords) {
       return new ymaps.Placemark(coords, {
-          iconCaption: 'РїРѕРёСЃРє...'
+        iconCaption: 'РїРѕРёСЃРє...'
       }, {
-          preset: 'islands#blueDotIconWithCaption',
-          draggable: false
+        preset: 'islands#blueDotIconWithCaption',
+        draggable: false
       });
-  }
+    }
 
    // РћРїСЂРµРґРµР»СЏРµРј Р°РґСЂРµСЃ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј (РѕР±СЂР°С‚РЅРѕРµ РіРµРѕРєРѕРґРёСЂРѕРІР°РЅРёРµ).
    var infowindowSearcher;
-  function getAddress(coords) {
-      myPlacemark.properties.set('iconCaption', 'РїРѕРёСЃРє...');
-      ymaps.geocode(coords).then(function (res) {
-          var firstGeoObject = res.geoObjects.get(0);
-          infowindowSearcher = (firstGeoObject.properties.get('text'));
-          myPlacemark.properties
-              .set({
+   function getAddress(coords) {
+    myPlacemark.properties.set('iconCaption', 'РїРѕРёСЃРє...');
+    ymaps.geocode(coords).then(function (res) {
+      var firstGeoObject = res.geoObjects.get(0);
+      infowindowSearcher = (firstGeoObject.properties.get('text'));
+      myPlacemark.properties
+      .set({
                   // Р¤РѕСЂРјРёСЂСѓРµРј СЃС‚СЂРѕРєСѓ СЃ РґР°РЅРЅС‹РјРё РѕР± РѕР±СЉРµРєС‚Рµ.
                   iconCaption: [
                       // РќР°Р·РІР°РЅРёРµ РЅР°СЃРµР»РµРЅРЅРѕРіРѕ РїСѓРЅРєС‚Р° РёР»Рё РІС‹С€РµСЃС‚РѕСЏС‰РµРµ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅРѕ-С‚РµСЂСЂРёС‚РѕСЂРёР°Р»СЊРЅРѕРµ РѕР±СЂР°Р·РѕРІР°РЅРёРµ.
                       firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
                       // РџРѕР»СѓС‡Р°РµРј РїСѓС‚СЊ РґРѕ С‚РѕРїРѕРЅРёРјР°, РµСЃР»Рё РјРµС‚РѕРґ РІРµСЂРЅСѓР» null, Р·Р°РїСЂР°С€РёРІР°РµРј РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р·РґР°РЅРёСЏ.
                       firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
-                  ].filter(Boolean).join(', '),
+                      ].filter(Boolean).join(', '),
                   // Р’ РєР°С‡РµСЃС‚РІРµ РєРѕРЅС‚РµРЅС‚Р° Р±Р°Р»СѓРЅР° Р·Р°РґР°РµРј СЃС‚СЂРѕРєСѓ СЃ Р°РґСЂРµСЃРѕРј РѕР±СЉРµРєС‚Р°.
                   balloonContent: firstGeoObject.getAddressLine()
-              });
-      });
+                });
+    });
   }
 
   // get adress
@@ -401,5 +452,5 @@ $(document).ready(function() {
 
 
 })();
-        
+
 });	

@@ -11,7 +11,7 @@
 	padding-top: 192px;
 	padding-bottom: 180px;
 	color: #fff;
-	text-align: left;
+	text-align: center;
 }
 
 .main-slider .slider-text-desc .header-text {
@@ -27,6 +27,9 @@
 
 }
 .header-social-menu ul {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
 	display: inline-block;
 	margin: 0;
 	margin-left: 6px;
@@ -235,6 +238,7 @@
 }
 
 .company-news {
+	display: none;
 	padding: 30px 84px 30px 66px;
 	background-color: #eeeeee;
 	overflow: hidden;
@@ -439,6 +443,7 @@
 }
 
 .company-proprietors {
+	display: none;
 	padding: 30px 84px 30px 66px;
 	background-color: #eeeeee;
 	height: 530px;
